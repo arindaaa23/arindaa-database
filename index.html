@@ -1,1 +1,35 @@
-isinya
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CRUD Data</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>CRUD Data Siswa</h1>
+
+  <form id="form-data">
+    <input type="hidden" id="id" />
+    <input type="text" id="nama" placeholder="Nama" required />
+    <input type="text" id="kelas" placeholder="Kelas" required />
+    <button type="submit">Simpan</button>
+  </form>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nama</th>
+        <th>Kelas</th>
+        <th>Aksi</th>
+      </tr>
+    </thead>
+    <tbody id="data-body">
+      <!-- Data akan ditampilkan di sini -->
+    </tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
