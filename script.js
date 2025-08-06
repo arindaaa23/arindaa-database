@@ -12,7 +12,7 @@ function fetchData() {
         row.innerHTML = `
           <td>${item.id}</td>
           <td>${item.nama}</td>
-          <td>${item.kelas}</td>
+          <td>${item.Tanggal}</td>
           <td>
             <button onclick="editData(${item.id}, '${item.nama}', '${item.kelas}')">Edit</button>
             <button onclick="deleteData(${item.id})">Hapus</button>
@@ -33,7 +33,7 @@ document.getElementById("form-data").addEventListener("submit", function (e) {
   const formData = new FormData();
   formData.append("id", id);
   formData.append("nama", nama);
-  formData.append("kelas", kelas);
+  formData.append("Tanggal", Tanggal);
   formData.append("action", id ? "update" : "create");
 
   fetch(apiUrl, {
@@ -50,7 +50,7 @@ document.getElementById("form-data").addEventListener("submit", function (e) {
 function editData(id, nama, kelas) {
   document.getElementById("id").value = id;
   document.getElementById("nama").value = nama;
-  document.getElementById("kelas").value = kelas;
+  document.getElementById("Tanggal").value = Tanggal;
 }
 
 function deleteData(id) {
